@@ -1,0 +1,21 @@
+// Nav
+.nav {
+  --#{$prefix}nav-link-active-color: #{$nav-link-active-color};
+}
+
+// Active link
+.nav-link {
+  &.active,
+  .nav-item.show > & {
+    color: var(--#{$prefix}nav-link-active-color);
+  }
+}
+
+// Tree
+.nav-tree {
+  > .nav-item:not(.show) {
+    > .nav-tree {
+      display: none;
+    }
+  }
+}
